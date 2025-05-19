@@ -183,6 +183,8 @@ ol {
     box-shadow: 10px 40px 50px 0px rgba(229, 233, 246, 0.4);
     border-radius: 20px;
     margin-bottom: 37px;
+    position: relative;
+    z-index: 100;
 }
 
 .services--link {
@@ -300,6 +302,17 @@ ol {
     letter-spacing: 0%;
 }
 
+.services-item:nth-child(6)::after {
+    position: absolute;
+    width: 131px;
+    height: 115px;
+    content: "";
+    background-image: url(../img/element.png);
+    top: -92px;
+    right: -49px;
+    z-index: -100;
+}
+
 .customer-item-user-name {
     font-weight: 700;
     font-size: 22px;
@@ -317,11 +330,30 @@ ol {
 .benefits-list {
     display: flex;
     flex-direction: column;
+    position: relative;
+}
+
+.benefits-item:nth-child(2)::after {
+    position: absolute;
+    width: 131px;
+    height: 115px;
+    content: "";
+    background-image: url(../img/element.png);
+    top: -242px;
+    right: -249px;
+    z-index: -80;
+}
+
+.benefits-item-img {
+    margin-left: 71px;
+    margin-right: 71px;
 }
 
 .benefits-item {
     display: flex;
     align-items: center;
+    position: relative;
+    margin-top: 322px;
 }
 
 .benefits-item:nth-child(even) {
@@ -336,6 +368,24 @@ ol {
     margin-top: 31px;
     color: rgba(125, 121, 135, 1);
     margin-bottom: 37px;
+}
+
+.download-link {
+    padding: 21px 66px 22px 43px;
+    position: relative;
+
+}
+
+.download-link::after {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    content: "";
+    background-image: url(../img/arrow-bottom.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    right: 43px;
+    bottom: 20px;
 }
 
 .customer-container {
@@ -363,7 +413,6 @@ ol {
 
 .customer-item-user-fedboak {
     display: flex;
-
     justify-content: center;
     margin-top: 77px;
     margin-bottom: 89px;
@@ -412,18 +461,36 @@ ol {
     width: 94px;
     margin: 0px 90px;
     align-items: center;
+
+}
+
+.customer-item {
     position: relative;
 }
 
-/* .customer-list::after{
+.customer-item::after {
     position: absolute;
     width: 131px;
     height: 115px;
     content: "";
     background-image: url(../img/element.png);
-    background-color:black;
-    left: 52px;
-} */
+    left: -82px;
+    bottom: -39px;
+    z-index: -1;
+}
+
+.customer-item::before {
+    position: absolute;
+    width: 131px;
+    height: 115px;
+    content: "";
+    background-image: url(../img/element.png);
+    right: -82px;
+    top: -89px;
+    opacity: 26px;
+    z-index: 29;
+}
+
 .pagination-item:nth-child(1) {
     .pagination-item-button {
         border-radius: 50%;
@@ -466,12 +533,14 @@ ol {
         vertical-align: calc(50% - 5px);
     }
 }
-.card{
+
+.card {
     margin-top: 216px;
     margin-bottom: 129px;
 }
-.card-container{
-  text-align: center;
+
+.card-container {
+    text-align: center;
 }
 
 .card-list {
@@ -483,7 +552,8 @@ ol {
     margin-bottom: 64px;
     position: relative;
 }
-.card-list::after{
+
+.card-list::after {
     position: absolute;
     width: 131px;
     height: 115px;
@@ -493,6 +563,7 @@ ol {
     left: -49px;
     z-index: -1;
 }
+
 .card-item {
     width: 350px;
     margin-right: 34px;
@@ -524,6 +595,11 @@ footer {
     background: linear-gradient(to right, #67c3f3, #5a98f2);
     color: white;
     padding: 60px 40px;
+    width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 118px 19px 119px 190px;
+    margin-bottom: 100px;
 }
 
 .footer-span {
@@ -539,7 +615,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 1200px;
+    width: 1600px;
     margin: 0 auto;
     position: relative;
 }
@@ -578,11 +654,13 @@ footer {
 }
 
 .footer-item {
+    display: flex;
+    justify-content: space-between;
     font-weight: 300;
     font-size: 18px;
     line-height: 38px;
     letter-spacing: 0%;
-
+    width: 140px;
 }
 
 .footer-links {
@@ -603,14 +681,24 @@ footer {
     font-size: 14px;
 }
 
-.footer-content::after{
+.footer-content::after {
     position: absolute;
     width: 131px;
     height: 115px;
     content: "";
     background-image: url(../img/element.png);
-    left: -52px;
-    bottom: -39px;
-    /* z-index: -1; */
+    left: -259px;
+    bottom: -149px;
+    z-index: -1;
+}
 
+.footer-content::before {
+    position: absolute;
+    width: 131px;
+    height: 115px;
+    content: "";
+    background-image: url(../img/element.png);
+    right: 99px;
+    top: -149px;
+    z-index: -1;
 }
